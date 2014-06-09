@@ -29,6 +29,12 @@ class ShapesController < ApplicationController
     redirect_to shapes_path
   end
 
+  def destroy
+    @shape = Shape.find(params[:id]).delete
+
+    redirect_to shapes_path
+  end
+
   private
   def shapes_params
     params.require(:shape).permit(:name, :number_of_sides)
