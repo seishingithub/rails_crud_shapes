@@ -1,0 +1,21 @@
+<%= form_for @shape do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :number_of_sides %>
+    <%= f.text_field :number_of_sides %>
+  </p>
+  <p>
+    <%= f.submit 'Create Shape' %>
+  </p>
+<% end %>
+
+<% @shapes.each do |shape| %>
+  <ul>
+    <li>
+      <%= shape.name %>, <%= shape.number_of_sides %>
+    </li>
+  </ul>
+<% end %>
