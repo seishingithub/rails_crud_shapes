@@ -14,7 +14,20 @@ class ShapesController < ApplicationController
     end
   end
 
+  def show
+    @shape = Shape.find(params[:id])
+  end
 
+  def edit
+    @shape = Shape.find(params[:id])
+  end
+
+  def update
+    @shape = Shape.find(params[:id])
+    @shape.update_attributes!(shapes_params)
+
+    redirect_to shapes_path
+  end
 
   private
   def shapes_params

@@ -8,14 +8,6 @@
     <%= f.text_field :number_of_sides %>
   </p>
   <p>
-    <%= f.submit 'Create Shape' %>
+    <%= f.submit 'Update Shape' %>
   </p>
-<% end %>
-
-<% @shapes.each do |shape| %>
-  <ul>
-    <li>
-      <%= link_to "#{shape.name}", shape_path(shape) %>, <%= shape.number_of_sides %>
-    </li>
-  </ul>
 <% end %>
